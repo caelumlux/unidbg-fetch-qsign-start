@@ -1,0 +1,17 @@
+{
+    "ApkId": "com.tencent.mobileqq",
+    "Apk_Sig": "A6B745BF24A2C277527716F6F36EB68D",
+    "App_Sig": "EFBFBDEFBFBD45EFBFBD24EFBFBDEFBFBD7752775C7530303136EFBFBDEFBFBD6EEFBFBDEFBFBD",
+    "Apk_v": "test",
+    "Apk_v_1": "8.9.88.51259658",
+    "Ver": "||A8.9.88.51259658",
+    "Appid": 537182098,
+    "Appid2": 537182098,
+    "BuildTime": 1697015435,
+    "SdkVersion": "6.0.0.2556",
+    "mMiscBitmap": 184024956,
+    "_sub_appid_list": [1600000226],
+    "_main_sig_map": 34869472,
+    "SSOVersion": 21,
+    "qr_v": 3
+}
