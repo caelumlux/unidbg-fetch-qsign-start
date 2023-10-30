@@ -5,17 +5,10 @@ import java.util.Map;
 
 public class Const
 {
-  public static String REALPATH = "D:\\workplace\\eclipse-2020-09\\AndroidQQCaller\\WebContent";
   
   public static final String UTF8 = "UTF8";
   
   public static int LogLevel = 1;
-  
-  public static boolean isValid = false;
-  
-  public static boolean hasTim = false;
-  
-  public static boolean hasAndroid = false;
   
   public static void check() {
     if (!isValid) {
