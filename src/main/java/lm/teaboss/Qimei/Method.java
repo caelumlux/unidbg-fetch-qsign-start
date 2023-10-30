@@ -9,7 +9,6 @@ import com.alibaba.fastjson.JSONObject;
 import lm.teaboss.Pow.CharacterUtils;
 import lm.teaboss.Pow.Const;
 import lm.teaboss.Pow.Converts;
-import lm.teaboss.Pow.Log;
 import lm.teaboss.Pow.RSAEncrypt;
 import java.io.IOException;
 import java.net.Authenticator;
@@ -111,7 +110,6 @@ public class Method {
             String password = "";
             if (proxyString != null && proxyString.trim().length() != 0) {
                 String[] proxy = proxyString.split(":");
-                Log.println("socket5 => " + proxyString);
                 if (proxy.length == 4) {
                     useauth = true;
                     proxy_ip = proxy[0];
