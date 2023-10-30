@@ -12,13 +12,6 @@ public final class Device {
     private String signver = "0x07";
     private String FEKitSoLoader_LocalSdkVersion = "";
     private String qq_code = "";
-    private String androidver = "12";
-    private final int SDK_INT = 23;
-    private String display_id = "OPPO-user 7.1.2 20171130.276299 release-keys";
-    private String product = "full_miui_64";
-    private String product_board = "miui_64";
-    private String bootloader = "unknown";
-    private String hardware = "unknown";
     private String qua = "";
 
     public Device(String qq_ver) {
@@ -157,58 +150,23 @@ public final class Device {
                 break;
             case 1647458468:
                 if (!var2.equals("8.9.70")) {
+                    this.qua = "V1_AND_SQ_8.9.70_4330_YYB_D";
+                    this.qq_code = "4330";
+                    this.qq_ver_sub = "11730";
+                    this.FEKitSoLoader_LocalSdkVersion = "7.0.326";
+                    this.signver = "0x0B";
                 }
         }
 
-        this.qua = "V1_AND_SQ_8.9.70_4330_YYB_D";
-        this.qq_code = "4330";
-        this.qq_ver_sub = "11730";
-        this.FEKitSoLoader_LocalSdkVersion = "7.0.326";
-        this.signver = "0x0B";
+        
     }
 
     public String getQq_ver_sub() {
         return this.qq_ver_sub;
     }
 
-    public void setQq_ver_sub(String qq_ver_sub) {
-        this.qq_ver_sub = qq_ver_sub;
-    }
-
-    public String getFEKitSoLoader_LocalSdkVersion() {
-        return this.FEKitSoLoader_LocalSdkVersion;
-    }
-
-    public void setFEKitSoLoader_LocalSdkVersion(String fEKitSoLoader_LocalSdkVersion) {
-        this.FEKitSoLoader_LocalSdkVersion = fEKitSoLoader_LocalSdkVersion;
-    }
-
     public String getQq_completename() {
         return this.getQq_ver() + "." + this.getQq_ver_sub();
-    }
-
-    public String getSignver() {
-        return this.signver;
-    }
-
-    public void setSignver(String signver) {
-        this.signver = signver;
-    }
-
-    public final String getAndroid_id() {
-        return this.android_id;
-    }
-
-    public final void setAndroid_id(String str) {
-        this.android_id = str;
-    }
-
-    public final String getQimei36() {
-        return this.qimei36;
-    }
-
-    public final void setQimei36(String str) {
-        this.qimei36 = str;
     }
 
     public String getGuid() {
@@ -218,101 +176,8 @@ public final class Device {
     public void setGuid(String guid) {
         this.guid = guid;
     }
-
-    public String getModel() {
-        return this.model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
-    public String getUUID() {
-        return this.UUID;
-    }
-
-    public void setUUID(String uUID) {
-        this.UUID = uUID;
-    }
-
-    public String getAndroidver() {
-        return this.androidver;
-    }
-
-    public void setAndroidver(String androidver) {
-        this.androidver = androidver;
-    }
-
-    public final String getBrand() {
-        return this.brand;
-    }
-
-    public final void setBrand(String str) {
-        this.brand = str;
-    }
-
     public final String getQq_ver() {
         return this.qq_ver;
-    }
-
-    public final void setQq_ver(String str) {
-        this.qq_ver = str;
-    }
-
-    public int getQqver() {
-        return Integer.parseInt(this.getQq_ver().replace(".", ""));
-    }
-
-    public final String getQq_code() {
-        return this.qq_code;
-    }
-
-    public final void setQq_code(String str) {
-        this.qq_code = str;
-    }
-
-    public final int getSDK_INT() {
-        return 23;
-    }
-
-    public final String getDisplay_id() {
-        return this.display_id;
-    }
-
-    public final void setDisplay_id(String str) {
-        this.display_id = str;
-    }
-
-    public final String getProduct() {
-        return this.product;
-    }
-
-    public final void setProduct(String str) {
-        this.product = str;
-    }
-
-    public final String getProduct_board() {
-        return this.product_board;
-    }
-
-    public final void setProduct_board(String str) {
-        this.product_board = str;
-    }
-
-    public final String getBootloader() {
-        return this.bootloader;
-    }
-
-    public final void setBootloader(String str) {
-        this.bootloader = str;
-    }
-
-    public final String getHardware() {
-        return this.hardware;
-    }
-
-    public final void setHardware(String str) {
-        this.hardware = str;
     }
 
     public String getQua() {
@@ -323,11 +188,4 @@ public final class Device {
         this.qua = qua;
     }
 
-    public long getUtcTime() {
-        return this.UtcTime;
-    }
-
-    public void setUtcTime(long utcTime) {
-        this.UtcTime = utcTime;
-    }
 }
