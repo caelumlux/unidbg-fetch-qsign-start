@@ -1,20 +1,18 @@
-获取QQSign参数通过Unidbg，开放HTTP API。unidbg-fetch-sign最低从QQ8.9.33（不囊括）开始支持。
+# unidbg-fetch-qsign
+unidbg呼び出しsoファイルから必要な値を取得する
+
+# 须知
+ - 请勿使用本程序进行各种违规违法行为,一切行为造成的后果与开发者和仓库主无关.
+ - 由于项目的特殊性，我们可能~~随时删除本项目~~且不会做出任何声明
 
 # 切记
 
  - 公共API具有高风险可能
- - 请使用与协议对应版本的libfekit.so文件
- - QSign基于Android平台，其它平台Sign计算的参数不同，不互通（例如：IPad）。
- - 不支持载入Tim.apk的so文件。
-
-# 部署方法
-
-**[Wiki](https://github.com/fuqiuluo/unidbg-fetch-qsign/wiki)**
-
-# 你可能需要的项目
-
-- [fix-protocol-version](https://github.com/cssxsh/fix-protocol-version)：基于**mirai**的qsign api对接。
-
+ - QSign基于Android平台，其它平台Sign计算的参数不同，不互通(例如：IPad)请注意)。
+ - 支持载入Tim.apk的so文件。
+ - 本仓库囊括了手Q8988及企点582及tim355等txlib
+ - 本程序囊括了tlv544~553,以及各种sign,请看HTTP API根目录的调用规范
+   
 # 使用API
 
 ## [初始化QSign&刷新token](https://github.com/fuqiuluo/unidbg-fetch-qsign/blob/master/refresh_token/README.md)
@@ -68,11 +66,4 @@ POST的内容："uin=" + uin + "&qua=" + qua + "&cmd=" + cmd + "&seq=" + seq + "
 | GUID    | 登录设备的GUID，将byte数组转换为HEX发送，必须是32长度的HEX字符串                     | ABCDABCDABCDABCDABCDABCDABCDABCD |
 | DATA    | QQ发送登录包的CmdId和SubCmdId，例子中810是登陆CmdId，9是SubCmdId             | 810_9                            |
 
-# 其他
-- 由于项目的特殊性，我们可能~~随时删除本项目~~且不会做出任何声明
 
-# 奇怪的交际援助
-
- - 昵称：**[咖啡]**  QQ：1456****68
- - 昵称：**RinsToln** QQ：339***8297302
- - 昵称：**菩提** QQ：919***595
