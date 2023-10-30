@@ -1,10 +1,10 @@
 package lm.teaboss
 import CONFIG
-import com.qqtool8.model.Qimei
-import com.qqtool8.util.Pow
+import lm.teaboss.Pow.Pow;
 import io.ktor.server.application.*
 import io.ktor.server.response.*
 import io.ktor.server.routing.*
+import lm.teaboss.Qimei.Method
 import moe.fuqiuluo.api.*
 import moe.fuqiuluo.comm.EnvData
 import moe.fuqiuluo.ext.fetchGet
@@ -52,7 +52,7 @@ fun Routing.Pow() {
         if (androidId.isNullOrEmpty() || imei.isNullOrEmpty() || guid.isNullOrEmpty()) {
             call.respond(APIResult(-1, "failed", "imei或androidId或GUID为空"))
         }
-        val result = Qimei.getQimei(imei, androidId, guid, "8.9.88")
+        val result = Method.getQimei(imei, androidId, guid, "8.9.88")
         call.respond(APIResult(0, "success", result))
     }
     get("/getXwDebugID") {
