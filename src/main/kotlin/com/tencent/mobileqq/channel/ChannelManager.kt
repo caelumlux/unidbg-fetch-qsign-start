@@ -5,8 +5,8 @@ import moe.fuqiuluo.unidbg.QSecVM
 
 object ChannelManager {
     fun setChannelProxy(vm: QSecVM, proxy: DvmObject<*>) {
-        //vm.newInstance("com/tencent/mobileqq/channel/ChannelManager", unique = true)
-        //    .callJniMethod(vm.emulator, "setChannelProxy(Lcom/tencent/mobileqq/channel/ChannelProxy;)V", proxy)
+        vm.newInstance("com/tencent/mobileqq/channel/ChannelManager", unique = true)
+            .callJniMethod(vm.emulator, "setChannelProxy(Lcom/tencent/mobileqq/channel/ChannelProxy;)V", proxy)
     }
 
     fun initReport(vm: QSecVM, qua: String, version: String, androidOs: String = "12", brand: String = "Redmi", model: String = "23013RK75C",
