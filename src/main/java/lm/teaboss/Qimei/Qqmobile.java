@@ -3,8 +3,6 @@ package lm.teaboss.Qimei;
 import lm.teaboss.Pow.Converts;
 
 public class Qqmobile extends BaseQqmobile<Qqmobile> {
-    public static final Qqmobile dao = (Qqmobile)(new Qqmobile()).dao();
-
     public Qqmobile() {
     }
 
