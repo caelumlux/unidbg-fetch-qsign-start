@@ -10,15 +10,6 @@ public class Const
   
   public static int LogLevel = 1;
   
-  public static void check() {
-    if (!isValid) {
-      System.exit(0);
-    }
-  }
-
-
-
-  
   public static TimeCounter TC = new TimeCounter();
 
 
