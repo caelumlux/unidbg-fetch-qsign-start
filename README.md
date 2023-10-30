@@ -15,7 +15,7 @@ unidbg呼び出しsoファイルから必要な値を取得する
    
 # 使用API
 
-## [初始化QSign&刷新token](https://github.com/fuqiuluo/unidbg-fetch-qsign/blob/master/refresh_token/README.md)
+## [初始化QSign&刷新token](https://github.com/TeaBoss-Developer/unidbg-fetch-qsign/blob/master/refresh_token/README.md)
 
 ### 原始energy
 
