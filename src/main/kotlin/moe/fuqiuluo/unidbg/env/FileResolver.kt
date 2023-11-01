@@ -1,6 +1,5 @@
 package moe.fuqiuluo.unidbg.env
 
-import CONFIG
 import com.github.unidbg.Emulator
 import com.github.unidbg.file.FileResult
 import com.github.unidbg.file.linux.AndroidFileIO
@@ -9,16 +8,13 @@ import com.github.unidbg.linux.file.ByteArrayFileIO
 import com.github.unidbg.linux.file.DirectoryFileIO
 import com.github.unidbg.linux.file.SimpleFileIO
 import com.github.unidbg.unix.UnixEmulator
-import io.ktor.server.config.*
 import moe.fuqiuluo.ext.hex2ByteArray
 import moe.fuqiuluo.unidbg.QSecVM
 import moe.fuqiuluo.unidbg.env.files.fetchCpuInfo
 import moe.fuqiuluo.unidbg.env.files.fetchMemInfo
 import moe.fuqiuluo.unidbg.env.files.fetchStat
 import moe.fuqiuluo.unidbg.env.files.fetchStatus
-import java.io.File
-import java.util.UUID
-import java.util.logging.Logger
+import java.util.*
 
 class FileResolver(
     sdk: Int,
@@ -221,8 +217,13 @@ class FileResolver(
             }
             return FileResult.success(SimpleFileIO(oflags, file, newPath))
         }
-
-        Logger.getLogger("FileResolver").warning("Couldn't find file: $path")
+        else{
+            if(path.substring(path.length-4,path.length).contains(".")){
+                return(FileResult.success(ByteArrayFileIO(oflags, path, "1145141919810".toByteArray())))
+            }else{
+                return FileResult.success(DirectoryFileIO(oflags, path))
+            }
+        }
         return def
     }
 }
